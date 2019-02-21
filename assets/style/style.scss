@@ -1,0 +1,66 @@
+$colors: (
+    mint: #b6fadc,
+    lightmint: #c9dbd3,
+    mauve: #915f6d,
+    lightmauve: #d6cdcf,
+    lavender: #dcd0ff,
+    red: #d53a2a,
+    navy: #1f0274,
+    darknavy: #211c26,
+    grey: #7b7788,
+    offwhite: #f7f6ed,
+    lightgrey: #b0aac4,
+    darkgrey: #4c4a54
+);
+
+@function colors($color-name) {
+    @return map-get($colors, $color-name)
+};
+
+body {
+    background-color: colors(navy);
+    background-image: linear-gradient(colors(navy), colors(navy), colors(darknavy), colors(darknavy));
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    color: colors(mauve);
+    font-size: 5em;
+    font-family: "Ultra", "serif";
+    text-align: center;
+    text-shadow:
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      2px 2px 0 #000;
+    padding: 50px;
+}
+
+h2 {
+    color: colors(mauve);
+    font-size: 3.5em;
+    text-align: center;
+    margin-top: 20%;
+
+}
+
+h3 {
+    color: colors(mauve);
+    font-size: 3em;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    font-style: italic;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.palm {
+    margin-top: 40%;
+    margin-left: -10%;
+}
